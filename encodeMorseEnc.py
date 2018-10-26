@@ -15,7 +15,7 @@ def main():
 		else:
 			flag = False
 	buildDic(keyPhrase)
-	input = start()
+	input = inputStart()
 	encInput = encrypt(input)
 	print(encInput)
 	convertToMorse(encInput)
