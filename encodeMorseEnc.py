@@ -9,7 +9,7 @@ encAlphabet = {}
 def main():
 	flag = True
 	while(flag):
-		keyPhrase = string.lower(raw_input("Enter your key phrase: "))
+		keyPhrase = string.lower(raw_input("enter your key phrase: "))
 		if(checkKey(keyPhrase)):
 			print("key phrase cannot contain repeat characters")
 		else:
@@ -17,8 +17,10 @@ def main():
 	buildDic(keyPhrase)
 	input = inputStart()
 	encInput = encrypt(input)
-	print(encInput)
+	print("encrypted message: "+encInput)
+	print("converting to morse...")
 	convertToMorse(encInput)
+	print("...converted and stored.")
 
 def checkKey(keyPhrase):
 	actual = (len(keyPhrase)*1.0)/2
@@ -71,7 +73,7 @@ if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
-		print 'Interrupted'
+		print 'oops... interrupted \_[o.O]_/'
 		try:
 			sys.exit(0)
 		except SystemExit:

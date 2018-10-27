@@ -22,18 +22,18 @@ def main():
 def start():
 	global ditDur
 	global btwDur
-	ditDur = int(raw_input("Enter dit duration: "))
+	ditDur = int(raw_input("enter dit duration: "))
 	if(ditDur < 2):
-		print("Message cannot be decoded at a speed less than 2 micros per dit.")
+		print("message cannot be decoded at a speed less than 2 micros per dit.")
 		ditDur = 2
 	recalculateDependents()
 	if(btwDur < 1):
 		btwDur = 1
 	line = raw_input("type or use file?(t/f) ")
 	if(line == "t"):
-		input = string.lower(raw_input("Enter Message: "))
+		input = string.lower(raw_input("enter Message: "))
 	else:
-		filen = raw_input("File path: ")
+		filen = raw_input("file path: ")
 		input = string.lower(readText(filen))
 	return input
 
@@ -45,9 +45,9 @@ def inputStart():
 	btwDur = 1
 	line = raw_input("type or use file?(t/f) ")
 	if(line == "t"):
-		input = string.lower(raw_input("Enter Message: "))
+		input = string.lower(raw_input("enter message: "))
 	else:
-		filen = raw_input("File path: ")
+		filen = raw_input("file path: ")
 		input = string.lower(readText(filen))
 	return input
 
@@ -214,7 +214,7 @@ if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
-		print 'Interrupted'
+		print 'oops... interrupted \_[o.O]_/'
 		try:
 			sys.exit(0)
 		except SystemExit:

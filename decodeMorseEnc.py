@@ -8,10 +8,15 @@ from decodeMorse import run
 decAlphabet = {}
 
 def main():
-	keyPhrase = string.lower(raw_input("Enter keyPhrase: "))
+	keyPhrase = string.lower(raw_input("enter key phrase: "))
 	buildDic(keyPhrase)
+	print("decoding morse message...")
 	msg = run()
+	print("...morse decoded.")
+	print("encrypted output: "+msg)
+	print("decrypting with "+'"'+keyPhrase+'"...')
 	decMsg = decryptMsg(msg)
+	print("...attempted decryption complete")
 	print(decMsg)
 
 def buildDic(keyPhrase):
@@ -42,7 +47,7 @@ if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
-		print 'Interrupted'
+		print 'oops... interrupted \_[o.O]_/'
 		try:
 			sys.exit(0)
 		except SystemExit:

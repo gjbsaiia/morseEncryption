@@ -67,7 +67,7 @@ def main():
 	print(msg)
 
 def run():
-	path = raw_input("Enter morse as .wav file: ")
+	path = raw_input("enter morse as .wav file: ")
 	data = getData(path)
 	dit, dash, spacer, nextChar, nextWord = findDitSize(data)
 	morseMsg = parseMorse(dit, dash, spacer, nextChar, nextWord, data)
@@ -83,7 +83,7 @@ def getData(path):
 	elif(dwidth == 2):
 		fmt = "%ih" % nframes
 	else:
-		print("Error, with file format")
+		print("error, with file format")
 		raise KeyboardInterrupt
 	packedData = wav.readframes(nframes)
 	wav.close()
@@ -205,7 +205,7 @@ if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
-		print 'Interrupted'
+		print 'oops... interrupted \_[o.O]_/'
 		try:
 			sys.exit(0)
 		except SystemExit:
