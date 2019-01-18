@@ -47,6 +47,7 @@ if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
+		print
 		print 'oops... interrupted \_[o.O]_/'
 		try:
 			sys.exit(0)

@@ -185,7 +185,7 @@ def parseMorse(dit, dash, spacer, nextChar, nextWord, data):
 		except IndexError:
 			characters.append(current)
 			break;
-	print characters
+	printMorse(characters)
 	return characters
 
 def decodeMorse(mm):
@@ -199,6 +199,13 @@ def decodeMorse(mm):
 		print(msg)
 		print("ERROR: unknown key "+each)
 		raise KeyboardInterrupt
+
+def printMorse(char):
+	morse = '"'
+	for each in char:
+		morse+=each
+	morse+='"'
+	print(morse)
 
 #Execute the wrapper
 if __name__ == "__main__":

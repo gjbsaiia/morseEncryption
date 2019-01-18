@@ -2,7 +2,7 @@
 import os
 import sys
 import string
-from encodeMorse import inputStart, morse, convertToMorse
+from encodeMorse import start, morse, convertToMorse
 
 encAlphabet = {}
 
@@ -15,7 +15,7 @@ def main():
 		else:
 			flag = False
 	buildDic(keyPhrase)
-	input = inputStart()
+	input = start()
 	encInput = encrypt(input)
 	print("encrypted message: "+encInput)
 	print("converting to morse...")
@@ -23,25 +23,19 @@ def main():
 	print("...converted and stored.")
 
 def checkKey(keyPhrase):
-	actual = (len(keyPhrase)*1.0)/2
-	intAct = len(keyPhrase)/2
-	if(actual == intAct):
-		pivot = intAct
-	else:
-		pivot = intAct+1
 	i = 0
-	j = pivot
+	j = len(keyPhrase)-1
 	flag = False
-	while(i < pivot):
+	while(i < len(keyPhrase)):
 		if(flag):
 			break
-		j = pivot
-		while(j < len(keyPhrase)):
+		while(j > i):
 			if(keyPhrase[i] == keyPhrase[j]):
 				print(keyPhrase[i]+", "+keyPhrase[j])
 				flag = True
 				break
-			j += 1
+			j -= 1
+		j = len(keyPhrase)-1
 		i += 1
 	return flag
 

@@ -19,6 +19,7 @@ def main():
 	convertToMorse(input)
 	print("...msg converted")
 
+
 def start():
 	global ditDur
 	global btwDur
@@ -214,7 +215,8 @@ if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
-		print 'oops... interrupted \_[o.O]_/'
+		print
+		print('oops... interrupted \_[o.O]_/')
 		try:
 			sys.exit(0)
 		except SystemExit:
