@@ -1,14 +1,22 @@
 ## morseEncryption
 silly script I wrote that can take inputted text, or a .txt file </br>
-and encrypts it using a keyword cypher (you're prompted for the keyword)</br>
-it then uses the morse alphabet to encode this data into a .wav file. </br>
+and then it uses the morse alphabet to encode this data into a .wav file. </br>
 </br>
-it's essentially a super geeky way to send secret messages. </br>
-encodeMorseEnc.py is preset to make the smallest .wav file that </br>
-decodeMorse.py can interpret. This means that if you listen to the </br>
+I've also written scripts that ask you for a keyword, and then use a</br>
+keyword cypher to ecrypt your messages before encoding them into morse</br>
+</br>
+It's essentially a super geeky way to send secret messages. </br>
+You have the option to set the "dit" speed (in ms) -</br>
+this allows you to make human translatable morse messages</br>
+or non-human translatable morse messages (dits too fast to understand)!</br>
+</br>
+The fastest dit speed you can set is 2ms per dit! This means that if you listen to the </br>
 .wav file, it sounds like static. </br>
-However, encodeMorse.py gives you the option to set the "dit" speed (in ms) -</br>
-this will allow to make human translatable, non-encrypted morse .wav files.</br>
+This limit is due to the ability of the computer to accurately decode the message,</br>
+but if you can modify my code and get the dit speed smaller - message me!</br>
+</br>
+All morse messages (in .wav file form) can be decoded with decodeMorse.py.</br>
+All keyword encrypted morse messages can be decoded with decodeMorseEnc.py.<br>
 </br>
 Enjoy!
 
