@@ -12,7 +12,7 @@ or non-human translatable morse messages (dits too fast to understand)!</br>
 </br>
 The fastest dit speed you can set is 2ms per dit! This means that if you listen to the </br>
 .wav file, it sounds like static. </br>
-This limit is due to the ability of the computer to accurately decode the message,</br>
+This limit is due to the ability of my program to accurately decode the message,</br>
 but if you can modify my code and get the dit speed smaller - message me!</br>
 </br>
 All morse messages (in .wav file form) can be decoded with decodeMorse.py.</br>
